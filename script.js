@@ -50,8 +50,7 @@ const App = Vue.createApp({
 			window.initiateCall();
 		},
 		copyURL() {
-			const updatedLink = "https://anuragstudio.com/JewelTalk/?room=" + this.roomLink.split("=")[1];
-			navigator.clipboard.writeText(this.updatedLink).then(
+			navigator.clipboard.writeText(this.roomLink).then(
 				() => {
 					this.copyText = "Link Copied 👍";
 					setTimeout(() => (this.copyText = ""), 3000);
