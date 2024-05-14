@@ -50,27 +50,26 @@
 			<div id="appWrap" v-bind:style="'display:block;'">
 				<div id="intro" v-if="!callInitiated && !showChat && !showSettings">
 					<h1>Jewel Talk</h1>
-					<p>A free, peer-to-peer, encrypted, video shopping web app.</p>
+					<p>A futuristic, peer-to-peer, encrypted, video shopping web app.</p>
 					<p>
 						<label for="roomId">Room Id:</label>
-						<input type="text" id="roomId" v-model="roomId" placeholder="Enter a room id" />
+						<input type="text" disabled="disabled" id="roomId" v-model="roomId" placeholder="Enter a room id" />
 					</p>
 					<p>
 						<label for="yourName">Your name</label>
 						<input type="text" id="yourName" v-model="name" v-on:keyup="updateName" placeholder="Enter your name" />
 					</p>
+					<p>
+						<label for="yourEmail">Your email</label>
+						<input type="text" id="yourEmail" v-model="email" v-on:keyup="updateEmail" placeholder="Enter your email" />
+					</p>
+					<p>
+						<label for="yourName">Your mobile number</label>
+						<input type="text" id="yourNumber" v-model="number" v-on:keyup="updateNumber" placeholder="Enter mobile number" />
+					</p>
 					<br />
 
 					<div class="footer">
-						<iframe
-							src="https://ghbtns.com/github-btn.html?user=vasanthv&repo=talk&type=star&count=true&size=large"
-							frameborder="0"
-							scrolling="0"
-							width="170"
-							height="30"
-							title="GitHub"
-						></iframe>
-
 						<button v-on:click="initiateCall">Proceed</button>
 					</div>
 				</div>
