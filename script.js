@@ -53,7 +53,7 @@ const App = Vue.createApp({
 			const updatedLink = "https://anuragstudio.com/JewelTalk/?room=" + this.roomLink.split("=")[1];
 			navigator.clipboard.writeText(this.roomLink).then(
 				() => {
-					this.copyText = "Copied 👍";
+					this.copyText = "Link Copied 👍";
 					setTimeout(() => (this.copyText = ""), 3000);
 				},
 				(err) => console.error(err)
